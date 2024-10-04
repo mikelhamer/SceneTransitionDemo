@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://x4d8pe45xwfm"]
+[gd_scene load_steps=6 format=3 uid="uid://cuvumx1cadod2"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_kpl0l"]
-[ext_resource type="Script" path="res://main.gd" id="1_ss76p"]
-[ext_resource type="Texture2D" uid="uid://ct3ftxfb7r32t" path="res://madolla.jpeg" id="1_xsq8u"]
+[ext_resource type="Script" path="res://main2.gd" id="1_3cxr2"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_ggaep"]
+[ext_resource type="Texture2D" uid="uid://ct3ftxfb7r32t" path="res://madolla.jpeg" id="3_uau7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2n5li"]
 size = Vector2(127, 122)
@@ -10,8 +10,8 @@ size = Vector2(127, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vu8j6"]
 size = Vector2(126, 168)
 
-[node name="Main" type="Node2D"]
-script = ExtResource("1_ss76p")
+[node name="Main2" type="Node2D"]
+script = ExtResource("1_3cxr2")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(690, 333)
@@ -25,16 +25,16 @@ offset_left = -10.0
 offset_top = -40.0
 offset_right = 115.0
 offset_bottom = 82.0
-color = Color(0, 1, 1, 1)
+color = Color(0.962136, 0.883911, 0.453162, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(261, 296)
-script = ExtResource("1_kpl0l")
+script = ExtResource("2_ggaep")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(33.875, 45.1667)
 scale = Vector2(0.0834987, 0.0834987)
-texture = ExtResource("1_xsq8u")
+texture = ExtResource("3_uau7q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(34, 45)
@@ -45,7 +45,7 @@ offset_left = 372.0
 offset_right = 763.0
 offset_bottom = 137.0
 theme_override_font_sizes/font_size = 100
-text = "SCENE 1"
+text = "SCENE 2"
 horizontal_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
